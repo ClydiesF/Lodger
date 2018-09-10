@@ -1,60 +1,140 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>LodgR</title>
     <!--GOOGLE FONT IMPORT-->
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <!--ICON FONT FOR RATING-->
+    <link rel="stylesheet" type="text/css" href="Img/font/flaticon.css"> 
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
 
-</head>     
+</head>
+
 <body>
     <div class="container">
         <header class="header">
             <img src="" alt="LodgR-logo" class="LodgR-logo">
-<!--SEARCH UI-->
+            <!--SEARCH UI-->
             <form action="#" class="search">
                 <input type="text" class="search__input" placeholder="find your lodge">
                 <button class="search__button">
                     <svg class="search__icon">
-                        <use xlink:href="img/mysprite.svg#search"/>
+                        <use xlink:href="img/mysprite.svg#search" />
                     </svg>
-                
+
                 </button>
             </form>
 
             <!-- NAV SECTION OF HEADR-->
-        <nav class="user-nav">
-            <div class="user-nav__icon-box">
-                <svg class="user-nav__icon">
-                    <use xlink:href="img/mysprite.svg#bookmark"/>
-                </svg>
-                <span class="user-nav__alert">10</span>
-            </div>
-            <div class="user-nav__icon-box">
-                <svg class="user-nav__icon">
-                    <use xlink:href="img/mysprite.svg#chat"/>
-                </svg>
-                <span class="user-nav__alert">3</span>
-            </div>
-            <div class="user-nav__profile">
-                <img src="img/kitaface.JPG" alt="picture of user" class="user-nav__profile-pic">
-                <span class="user-nav__profile-name">Kita</span>
-            </div>
-        </nav>
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/mysprite.svg#bookmark" />
+                    </svg>
+                    <span class="user-nav__alert">10</span>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/mysprite.svg#chat" />
+                    </svg>
+                    <span class="user-nav__alert">3</span>
+                </div>
+                <div class="user-nav__profile">
+                    <img src="img/kitaface.JPG" alt="picture of user" class="user-nav__profile-pic">
+                    <span class="user-nav__profile-name">Kita</span>
+                </div>
+            </nav>
 
         </header>
         <div class="content">
+            <!--SIDEBAR SECTION OF MAIN CONTENT-->
             <nav class="sidebar">
-                Navigation
+                <ul class="sidebar__nav">
+                    <li class="sidebar__item sidebar__item--active">
+                        <a href="#" class="sidebar__link">
+                            <svg class="sidebar__icon">
+                                <use xlink:href="img/mysprite.svg#helipad" />
+                            </svg>
+                            <span>Lodge</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <svg class="sidebar__icon">
+                                <use xlink:href="img/mysprite.svg#aircraft" />
+                            </svg>
+                            <span>flight</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <svg class="sidebar__icon">
+                                <use xlink:href="img/mysprite.svg#taxi" />
+                            </svg>
+                            <span>car rental</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <svg class="sidebar__icon">
+                                <use xlink:href="img/mysprite.svg#passport" />
+                            </svg>
+                            <span>tours</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+
             </nav>
+            <!--LODGE VIEW OF 3 LODGES-->
             <main class="hotel-view">
-                Hotel View
+                <div class="gallery">
+                    <figure class="gallery__item">
+                        <img src="Img/lodge1.jpg" alt="lodge photo 1" class="gallery__photo">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="Img/lodge2.jpg" alt="lodge photo 2" class="gallery__photo">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="Img/lodge3.jpg" alt="lodge photo 3" class="gallery__photo">
+                    </figure>
+                </div>
+                <!--OVER VIEW SECTION OF THE SITE-->
+                <div class="overview">
+                    <h1 class="overview__heading">
+                        Platapus pond lodge
+                      
+                    </h1>
+                    <div class="overview__stars">
+                            <i class="flaticon-star"></i>
+                            <i class="flaticon-star"></i>
+                            <i class="flaticon-star"></i>
+                            <i class="flaticon-star"></i>
+                            <i class="flaticon-star"></i>
+                    </div>
+                    <div class="overview__location">
+                            <svg class="overview__icon-location">
+                                    <use xlink:href="img/mysprite.svg#pin" />
+                                </svg>
+                                <button class="btn-inline">Hidden Leaf Village</button>
+                    </div>
+
+                    <div class="overview__rating">
+                        <div class="overview___rating-average">8.6</div>
+                        <div class="overview__ratin-count">69 votes</div>
+                    </div>
+                </div>
+
             </main>
         </div>
     </div>
-    
+
 </body>
+
 </html>
