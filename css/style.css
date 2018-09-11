@@ -60,9 +60,27 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
+  background-color: var(--Lgrey4);
+  flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  border-bottom: 1px solid var(--Dgrey3);
+  font-size: 1.4rem; }
+
+.description {
   background-color: var(--Dgrey3);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  font-size: inherit; }
+
+.user-reviews {
+  color: var(--Dgrey3);
   flex: 1;
-  height: 60rem; }
+  font-size: inherit; }
 
 .LodgR-logo {
   height: 3.25rem;
@@ -197,7 +215,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--Dgrey3); }
+  border-bottom: 1px solid var(--Dgrey1); }
   .overview__heading {
     font-size: 1.8rem;
     font-weight: 300;
@@ -206,10 +224,26 @@ body {
     padding: .5rem 1.5rem; }
   .overview__stars {
     margin-right: auto; }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    vertical-align: center; }
   .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--primary-color); }
+  .overview__rating {
+    margin-left: 3rem;
+    margin-right: 1rem;
+    background-color: goldenrod;
+    text-align: center;
+    padding: .5rem; }
+  .overview__rating-count {
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .overview__rating-average {
+    font-size: 3rem;
+    font-weight: 300; }
 
 .flaticon-star {
   color: var(--primary-color);
@@ -227,3 +261,81 @@ body {
   transition: all .2s; }
   .btn-inline:hover {
     color: var(--Dgrey1); }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulse 1s infinite; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%; }
+
+.recommend {
+  display: flex;
+  font-size: 1.3rem;
+  color: var(--Dgrey3);
+  justify-content: space-between;
+  align-items: center; }
+  .recommend__count {
+    color: black;
+    margin-right: 2rem; }
+  .recommend__friends {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .recommend__pic {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px var(--primary-color) solid; }
+    .recommend__pic:not(:last-child) {
+      margin-right: -1.7rem; }
+
+.review {
+  background-color: whitesmoke;
+  padding: 3rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 3.5rem; }
+  .review__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .review__pic {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    border: solid 3px var(--primary-color);
+    margin-top: 1rem; }
+  .review__user-box {
+    margin-left: -5.5rem; }
+  .review__user-name {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--primary-color); }
+  .review__user-date {
+    font-size: 1.3rem; }
+  .review__rating {
+    font-weight: 300;
+    font-size: 3rem;
+    color: goldenrod; }
