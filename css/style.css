@@ -23,6 +23,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Slabo 27px', serif;
@@ -40,6 +43,11 @@ body {
   background-color: var(--Lgrey4);
   box-shadow: var(--box-shadow);
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   height: 6rem;
@@ -51,6 +59,10 @@ body {
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column;
+      justify-content: center; } }
 
 .sidebar {
   background-color: var(--Dgrey1);
@@ -68,6 +80,9 @@ body {
   padding: 4.5rem;
   border-bottom: 1px solid var(--Dgrey3);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: var(--Dgrey3);
@@ -76,6 +91,10 @@ body {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
   padding: 2rem;
   font-size: inherit; }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   color: var(--Dgrey3);
@@ -167,6 +186,11 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar__nav {
+      margin: 0;
+      justify-content: space-between;
+      display: flex; } }
 
 .sidebar__item {
   position: relative; }
@@ -316,7 +340,16 @@ body {
   background-color: whitesmoke;
   padding: 3rem;
   box-shadow: var(--box-shadow);
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
+  .review__text {
+    z-index: 10;
+    position: relative; }
   .review__user {
     display: flex;
     justify-content: space-between;
@@ -339,3 +372,38 @@ body {
     font-weight: 300;
     font-size: 3rem;
     color: goldenrod; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -8.5rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: var(--primary-color-l);
+    z-index: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2.5rem 0; } }
+  .cta__book-now {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 2rem;
+  border: none;
+  background-color: var(--primary-color-l);
+  padding: 1.5rem;
+  text-transform: uppercase;
+  transition: all .5s;
+  font-weight: 300;
+  color: whitesmoke; }
+  .btn:hover {
+    transform: translateY(-1rem);
+    box-shadow: var(--box-shadow); }
+  .btn:active {
+    transform: translateY(0.5rem); }
